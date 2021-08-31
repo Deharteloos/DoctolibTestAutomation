@@ -1,0 +1,20 @@
+# Project directory
+local_driver/
+target/
+allure-results/
+
+#Project files
+config/config.properties
+
+# IntelliJ
+.idea/
+*.iml
+
+# Some resources
+*.exe
+
+
+
+
+
+
