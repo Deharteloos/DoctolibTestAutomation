@@ -131,18 +131,18 @@ public class Page {
         element.click();
     }
 
-    protected Boolean verifyLink(WebElement element) throws IOException {
-        String url = element.getAttribute("href");
-        clickOn(element);
-        saveScreenShotPNG();
+    protected boolean verifyLink(String url) {
         try{
-            HttpURLConnection c = (HttpURLConnection) new URL(url).openConnection();
+            HttpURLConnection c= (HttpURLConnection)new URL(url).openConnection();
             c.setRequestMethod("HEAD");
             c.connect();
             int r = c.getResponseCode();
+            LOG.info(" STATUS CODE : " + r);
             if(r == 200) return true;
+            saveScreenShotPNG();
             return false;
         }catch (Exception e){
+            saveScreenShotPNG();
             return false;
         }
     }
