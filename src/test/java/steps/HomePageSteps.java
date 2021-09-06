@@ -39,9 +39,4 @@ public class HomePageSteps {
         homePage.goToAboutus();
     }
 
-    @When("Click on the {string} in the section search for practitioners at the bottom of the page")
-    public void clickOnTheInTheSectionSearchForPractitionersAtTheBottomOfThePage(String letter) {
-        homePage.goToPractitionerStartingWith(letter);
-    }
-
 }
